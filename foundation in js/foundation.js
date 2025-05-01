@@ -102,7 +102,7 @@ function multiplicationtable(number) {
   }
 }
 
-multiplicationtable();
+multiplicationtable(50);
 
 // 11. Find the sum of all even numbers between 1 and 50.	
   // problem number 1
@@ -119,3 +119,15 @@ function sumofevennumber(numbers) {
 }
 console.log(sumofevennumber(50));
 // 12. find factorial of a number using a loop.from(selector, 
+
+function findfactorial(number){
+  let factorial = 1;
+  for(let i = number; i >= 1; i--){
+    factorial *= i;
+  }
+  return factorial;
+}
+console.log(findfactorial(5)); // Output: 120
+
+
+
