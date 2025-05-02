@@ -105,14 +105,14 @@ function multiplicationtable(number) {
 multiplicationtable(50);
 
 // 11. Find the sum of all even numbers between 1 and 50.	
-  // problem number 1
+// problem number 1
 function sumofevennumber(numbers) {
   let sum = 0;
   for (let i = 1; i <= numbers; i++) {
-    if(i % 2 == 0){
-     
+    if (i % 2 == 0) {
+
       sum += i
-    
+
     }
   }
   return sum;
@@ -120,9 +120,9 @@ function sumofevennumber(numbers) {
 console.log(sumofevennumber(50));
 // 12. find factorial of a number using a loop.from(selector, 
 
-function findfactorial(number){
+function findfactorial(number) {
   let factorial = 1;
-  for(let i = number; i >= 1; i--){
+  for (let i = number; i >= 1; i--) {
     factorial *= i;
   }
   return factorial;
@@ -130,16 +130,16 @@ function findfactorial(number){
 console.log(findfactorial(5)); // Output: 120
 
 
- // 13. Print a triangle pattern using nested loops.		
- function trianglePattern(rows) {
-  for(let i = 0; i<=rows ; i++){
+// 13. Print a triangle pattern using nested loops.		
+function trianglePattern(rows) {
+  for (let i = 0; i <= rows; i++) {
     let triane = "";
-    for(let j = 0; j <= i; j++ ){
+    for (let j = 0; j <= i; j++) {
       triane = triane + " * "
     }
     console.log(triane)
   }
- }
+}
 trianglePattern(5);
 
 
@@ -164,28 +164,70 @@ drawCircle(5);
 
 // 14. Reverse a string using a loop.	
 
-function Reversestring(str){
+function Reversestring(str) {
   let reversed = "";
-  for(let i = str.length - 1; i >= 0; i--){
-  reversed = reversed + str[i]
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed = reversed + str[i]
   }
   return reversed;
 }
 console.log(Reversestring("yeasin")); //nisaey
 
 // try another way to reverse a string using loop and best statagy;
-function reverseString(str){
+function reverseString(str) {
   let arry = str.split("");
   let reversed = [];
-  for(let i = arry.length - 1; i>=0; i--){
+  for (let i = arry.length - 1; i >= 0; i--) {
     reversed.push(arry[i])
   }
   return reversed.join('');
 }
-let string =reverseString("fareya");  // ayeraf
+let string = reverseString("fareya");  // ayeraf
 console.log(string); // this approch is best version 
 
 // 15. Count vowels and consonants in a string.								
-            
 
+function CeeckvowelAndConsonat(str) {
+  let countVowel = 0;
+  let countConsonat = 0;
+  let check = "aeiou";
+  for (let i = 0; i < str.length; i++) {
+    let lowercase = str[i].toLowerCase();
+    if (/[a-z]/.test(lowercase)) {
+      if (check.includes(lowercase)){
+        countVowel++
+      }else{
+        countConsonat++
+      }
+   }
+  }
+  return{ countVowel,countConsonat , str }
+}
+let vowels= CeeckvowelAndConsonat("ptnqr")
+console.log(vowels)
 
+// 🧩 Functions and Logic		
+
+// 16. Create a function that returns the square of a number.	
+
+function findsquare(num){
+  return num * num;
+}
+
+console.log(findsquare(10))
+    
+// 17. Write a function to check if a string is a palindrome.	
+
+function isPalindrome(str) {
+  // Step 1: Normalize the string (convert to lowercase and remove non-alphabetic characters)
+  const normalizedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  
+  // Step 2: Reverse the normalized string
+  const reversedStr = normalizedStr.split('').reverse().join('');
+  
+  // Step 3: Compare the original and reversed strings
+  return normalizedStr === reversedStr;
+}
+
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
