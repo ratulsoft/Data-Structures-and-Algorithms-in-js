@@ -130,4 +130,62 @@ function findfactorial(number){
 console.log(findfactorial(5)); // Output: 120
 
 
+ // 13. Print a triangle pattern using nested loops.		
+ function trianglePattern(rows) {
+  for(let i = 0; i<=rows ; i++){
+    let triane = "";
+    for(let j = 0; j <= i; j++ ){
+      triane = triane + " * "
+    }
+    console.log(triane)
+  }
+ }
+trianglePattern(5);
+
+
+// create circle using nasted loops in js
+
+function drawCircle(radius) {
+  for (let y = -radius; y <= radius; y++) {
+    let line = '';
+    for (let x = -radius; x <= radius; x++) {
+      // Circle equation (with tolerance)
+      if (Math.abs(x * x + y * y - radius * radius) < radius) {
+        line += '8';
+      } else {
+        line += ' ';
+      }
+    }
+    console.log(line);
+  }
+}
+
+drawCircle(5);
+
+// 14. Reverse a string using a loop.	
+
+function Reversestring(str){
+  let reversed = "";
+  for(let i = str.length - 1; i >= 0; i--){
+  reversed = reversed + str[i]
+  }
+  return reversed;
+}
+console.log(Reversestring("yeasin")); //nisaey
+
+// try another way to reverse a string using loop and best statagy;
+function reverseString(str){
+  let arry = str.split("");
+  let reversed = [];
+  for(let i = arry.length - 1; i>=0; i--){
+    reversed.push(arry[i])
+  }
+  return reversed.join('');
+}
+let string =reverseString("fareya");  // ayeraf
+console.log(string); // this approch is best version 
+
+// 15. Count vowels and consonants in a string.								
+            
+
 
