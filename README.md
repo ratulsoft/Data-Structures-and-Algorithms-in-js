@@ -56,7 +56,8 @@
                                 
 21. Find the largest number in an array.								
                                 
-22. Find the sum of all elements in an array.								
+22. Find the sum of all elements in an 
+array.								
                                 
 23. Remove duplicates from an array.								
                                 

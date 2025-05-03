@@ -229,5 +229,65 @@ function isPalindrome(str) {
   return normalizedStr === reversedStr;
 }
 
-console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
-console.log(isPalindrome("hello")); // Output: false
+let is = isPalindrome("neen")
+
+// try to another way to solved problem
+function palendromechecker(str){
+ let normalstring =str.toLowerCase().replace(/[^a-z0-9]/g,'');
+ 
+ const reversee = normalstring.split("").reverse().join('');
+ return normalstring === reversee
+
+}
+let pl = (palendromechecker("md yeasin shikh"))
+
+///18. Create a function that checks whether a number is prime.
+//............ solving problem .............
+
+function primenumberchecker(number){
+  if(number <= 1) return false // prime number
+
+   for(let i = 2 ; i <= Math.sqrt(number); i++){
+    if(number % 2 === 0) return false;
+   }
+    return true
+}
+
+ console.log(primenumberchecker(7))
+
+  // 19. Write a function that returns the Fibonacci series up to n terms.								
+      
+  function GoldenRatio(limit) {
+    let a = 0; // first number
+    let b = 1; // second number
+  
+    for (let i = 1; i <= limit; i++) {
+      console.log(a);
+      let next = a + b;
+      a = b;
+      b = next;
+    }
+  }
+  
+  GoldenRatio(); // prints first 10 Fibonacci numbers
+  
+ // 20. Write a function that returns the sum of digits of a number.	
+
+ function sumDigits(number) {
+  let sum = 0;
+  let st = number.toString();
+
+  for (let i = 0; i < st.length; i++) {
+    sum = sum + parseInt(st[i]);
+  }
+
+  return sum;
+}
+
+console.log(sumDigits(12314)); // Output: 11
+
+//                                  
+// 🧮 Arrays and Array Methods			
+ // 21. Find the largest number in an array.	
+
+  const arry = [10,23,4,5,2,3,43,45,24,90,56];
