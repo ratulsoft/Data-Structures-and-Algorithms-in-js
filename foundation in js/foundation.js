@@ -290,4 +290,31 @@ console.log(sumDigits(12314)); // Output: 11
 // 🧮 Arrays and Array Methods			
  // 21. Find the largest number in an array.	
 
-  const arry = [10,23,4,5,2,3,43,45,24,90,56];
+const arry = [10, 23, 4, 5, 2, 3, 43, 45, 24, 90, 56,59,60,30,52,22,121,1];
+let lnumber = arry[0];
+let smallnum = arry[0]
+
+for (let i = 0; i < arry.length; i++) {
+  if (lnumber <= arry[i]) {
+    lnumber = arry[i];
+  }
+
+  if(smallnum >= arry[i]){
+    smallnum = arry[i]
+  }
+}
+
+console.log(`largest number : ${lnumber}`);
+console.log(`smallnum number : ${smallnum}`);
+
+// 22. Find the sum of all elements in an array.
+const arry1 = [10,20,40,50,50,50,502,2,52,2,52,523,2]
+
+let sum1 = 0;
+for(let i = 0; i < arry1.length; i++){
+  sum1 += arry1[i]
+}
+				
+console.log(sum1)
+
+// 23. Remove duplicates from an array.	
