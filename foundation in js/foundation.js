@@ -315,6 +315,44 @@ for(let i = 0; i < arry1.length; i++){
   sum1 += arry1[i]
 }
 				
-console.log(sum1)
+
 
 // 23. Remove duplicates from an array.	
+const array = [1, 2, 2, 3,3,3,3, 4, 4, 5,1,5,5,2 ,6,65,3,4,24,52,33,112,122,111,121,121,112];
+const array1 = [1, 2, 2, 3,3,3,3, 4, 4, 5,1,5,5,2,2,53,52,212,23,23,323,231,45,45];
+const uniqueArray = [...array,...array1];
+const copyremove = [...new Set(uniqueArray)]
+
+ // Output: [1, 2, 3, 4, 5]
+
+
+
+
+// 24. Sort an array in ascending order without using .sort().	
+
+const sortArry = [1, 2, 3, 521, 2, 13, 131, 44, 5255, 33, 21, 31, 2, 4365, 24, 34, 4365, 35, 75, 7, 97, 75, 35, 365, 679, 65353658, 8584, 78, 33, 362, 707];
+
+let sortArray = [];
+
+let copyArray = [...sortArry]; // Create a copy so we don’t modify the original
+
+while (copyArray.length > 0) {
+  let min = copyArray[0];
+  let minIndex = 0;
+
+  // Find the minimum element in the unsorted array
+  for (let i = 1; i < copyArray.length; i++) {
+    if (copyArray[i] < min) {
+      min = copyArray[i];
+      minIndex = i;
+    }
+  }
+
+  // Push the minimum to the sorted array
+  sortArray.push(min);
+
+  // Remove the minimum from the original array
+  copyArray.splice(minIndex, 1);
+}
+
+console.log(sortArray);
