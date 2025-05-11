@@ -356,3 +356,6 @@ while (copyArray.length > 0) {
 }
 
 console.log(sortArray);
+//  26. Merge two sorted arrays into a single sorted array.	
+
+const onedimontionArry =[]
