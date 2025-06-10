@@ -39,3 +39,15 @@ for(let i = 0 ; i < newarry.length-1; i++){
 
 console.log(newarry)
 
+
+
+const NewArry = [10,41,31,34,12,13,53,143,52,52,52,23,42,5,63,7,85,90,56,3];
+// buble sort
+
+for(let i = 0; i < NewArry.length; i++){
+    
+}
+
+
+//EnhancedpowerManagementEnabled
+
