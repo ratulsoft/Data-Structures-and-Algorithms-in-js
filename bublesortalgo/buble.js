@@ -51,3 +51,8 @@ for(let i = 0; i < NewArry.length; i++){
 
 //EnhancedpowerManagementEnabled
 
+let array = [10,20,30,40,50,60,70,85,3,1,2,4,5,6,4,73,4,11,23,4,64,67,8,96];
+
+for(let i = 0; i <= array.length; i++){
+    console.log(array[i])
+}
